@@ -33,17 +33,13 @@ cuvis --help
 
 - Fish shell 3.0+
 - NVIDIA GPU with CUDA support
-- One of the following for device detection:
-  - `nvidia-smi` (recommended)
-  - Python 3 with `pynvml` package
-  - CUDA toolkit installation
+- `nvidia-smi` command (usually provided by `nvidia-utils`)
 
 ## Features
 
 - **Flexible device specification**: Supports single devices, comma-separated lists, ranges, and combinations
 - **Smart tab completion**: Context-aware completions that understand comma and dash separators
 - **Device validation**: Ensures specified devices actually exist before setting
-- **Multiple detection methods**: Automatically detects available devices using the best available method
 - **Lightweight**: Focused solely on managing `CUDA_VISIBLE_DEVICES` environment variable
 
 ## Examples
