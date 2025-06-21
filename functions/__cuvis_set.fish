@@ -12,7 +12,7 @@ function __cuvis_set -d "Set visible CUDA devices"
         return 1
     end
 
-    set -l available_devices (__cuvis_get_available_devices)
+    set -l available_devices (__cuvis_get_device_indices)
     if test $status -ne 0
         echo "cuvis set: failed to query available devices" >&2
         return 1

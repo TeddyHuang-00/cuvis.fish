@@ -1,6 +1,6 @@
 function __cuvis_complete_devices -d "List available CUDA devices for completion"
     set -l prefix $argv[1]
-    set -l devices (__cuvis_get_available_devices 2>/dev/null)
+    set -l devices (__cuvis_get_device_indices 2>/dev/null)
     if test $status -ne 0
         # Gracefully return if nvidia-smi is not available
         return
