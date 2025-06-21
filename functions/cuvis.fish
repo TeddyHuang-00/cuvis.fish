@@ -13,18 +13,18 @@ function cuvis -d "Manage CUDA device visibility"
         return 1
     end
 
-    set -l command $argv[1]
-    set -l args $argv[2..-1]
+    set -l cmd $argv[1]
+    set -e argv[1]
 
-    switch $command
+    switch $cmd
         case set
-            __cuvis_set $args
+            __cuvis_set $argv
         case info
-            __cuvis_info $args
+            __cuvis_info $argv
         case unset
-            __cuvis_unset $args
+            __cuvis_unset $argv
         case '*'
-            echo "cuvis: unknown command '$command'" >&2
+            echo "cuvis: unknown command '$cmd'" >&2
             echo "Try 'cuvis --help' for more information." >&2
             return 1
     end
